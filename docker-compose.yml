@@ -1,0 +1,12 @@
+services:
+  consultflow-db:
+    image: postgres:16-alpine
+    container_name: consultflow-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: consultflow
+      POSTGRES_USER: consultflow
+      POSTGRES_PASSWORD: consultflow
+    mem_limit: 512m
+    restart: always
